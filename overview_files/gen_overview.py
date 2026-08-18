@@ -1,10 +1,13 @@
+from io import BytesIO
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent
 CSV_PATH = BASE_DIR / "shared_overview.csv"
 HTML_PATH_TEMPLATE = "shared_overview_table{table_name}.html"
+PNG_PATH_TEMPLATE = "shared_overview_table{table_name}.png"
 
 def build_df() -> pd.DataFrame:
     return pd.read_csv(CSV_PATH, sep="|")
@@ -27,14 +30,60 @@ def path_from_template(table_name: str) -> Path:
     return BASE_DIR / HTML_PATH_TEMPLATE.format(table_name=table_name)
 
 
-def write_if_changed(output_path: Path, content: dict[str,str]) -> bool:
+def png_path_from_template(table_name: str) -> Path:
+    return BASE_DIR / PNG_PATH_TEMPLATE.format(table_name=table_name)
+
+
+def data_png_path(df: pd.DataFrame, row_index: int, table_name: str) -> Path:
+    folder = BASE_DIR.parent / str(df.iloc[row_index - 1]["Mappe"])
+    return folder / "data" / PNG_PATH_TEMPLATE.format(table_name=table_name)
+
+
+def build_png(df: pd.DataFrame, highlighted_row: int) -> bytes:
+    figure, axis = plt.subplots(figsize=(14, 1.35), dpi=180)
+    axis.axis("off")
+    table = axis.table(
+        cellText=df.astype(str).values.tolist(),
+        colLabels=list(df.columns),
+        colWidths=[0.06, 0.18, 0.16, 0.60],
+        cellLoc="left",
+        loc="center",
+    )
+    table.auto_set_font_size(False)
+    table.set_fontsize(9)
+    table.scale(1, 1.8)
+
+    for column in range(len(df.columns)):
+        header = table[0, column]
+        header.set_facecolor("#263238")
+        header.set_text_props(color="white", weight="bold")
+
+    for row in range(1, len(df) + 1):
+        for column in range(len(df.columns)):
+            cell = table[row, column]
+            is_highlighted = df.iloc[row - 1]["#"] == highlighted_row
+            cell.set_facecolor("#e8f1f5" if is_highlighted else "white")
+            if is_highlighted:
+                cell.set_text_props(weight="bold")
+            cell.set_edgecolor("#b0bec5")
+
+    output = BytesIO()
+    figure.savefig(output, format="png", bbox_inches="tight", pad_inches=0.08)
+    plt.close(figure)
+    return output.getvalue()
+
+
+def write_if_changed(output_path: Path, content: str | bytes) -> bool:
     if output_path.exists():
-        existing = output_path.read_text(encoding="utf-8")
+        existing = output_path.read_bytes() if isinstance(content, bytes) else output_path.read_text(encoding="utf-8")
         if existing == content:
             return False
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(content, encoding="utf-8")
+    if isinstance(content, bytes):
+        output_path.write_bytes(content)
+    else:
+        output_path.write_text(content, encoding="utf-8")
     return True
 
 
@@ -51,6 +100,22 @@ def main() -> None:
             print(f"Updated {html_path}")
         else:
             print(f"No changes in {html_path}")
+
+        png_path = png_path_from_template(table_name)
+        changed = write_if_changed(png_path, build_png(df, i))
+
+        if changed:
+            print(f"Updated {png_path}")
+        else:
+            print(f"No changes in {png_path}")
+
+        data_path = data_png_path(df, i, table_name)
+        changed = write_if_changed(data_path, build_png(df, i))
+
+        if changed:
+            print(f"Updated {data_path}")
+        else:
+            print(f"No changes in {data_path}")
 
 
 

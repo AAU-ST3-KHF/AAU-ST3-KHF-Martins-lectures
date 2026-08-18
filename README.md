@@ -1,5 +1,8 @@
 # Forord
 
+
+![overview_files/shared_overview_table1.png](overview_files/shared_overview_table1.png)
+
 Du kan få alle lectures i dette kursus ved at køre følgende linje i din terminal:
 
 ## Option 1: UV
@@ -33,7 +36,9 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt
 Overblik over Cardiovasculær Modellings Forelæsningerne.
 
 ---
-![ggd](overview_files/shared_overview_table.png)
+[overview_files/shared_overview_table1.html](overview_files/shared_overview_table1.html)
+
+![Forelæsningsoversigt](overview_files/shared_overview_table1.png)
 
 ---
 
