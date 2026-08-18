@@ -1,0 +1,3 @@
+https://github.com/AAU-ST3-KHF/cardiovascular_system_hjertet.git
+https://github.com/AAU-ST3-KHF/cardiovascular_system_hemodynamics.git
+https://github.com/AAU-ST3-KHF/cardiovascular_system_blod.git

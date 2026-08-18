@@ -1,6 +1,6 @@
 # Forord
 
-Du kan få alle Martins lectures til dette kursus ved at køre følgende funktion i din terminal:
+Du kan få alle lectures i dette kursus ved at køre følgende funktion i din terminal:
 >```
 > python sync.py
 >```
@@ -12,7 +12,7 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py.
 
 # KOMPLET FORELÆSNINGSPLAN – ST2 ANVENDT PROGRAMMERING
 
-Overblik over 3 forelæsninger, der dækker grundlæggende indenfor Modellering af Cardiovasculære systemer.
+Overblik over Cardiovasculær Modellings Forelæsningerne.
 
 ---
 ![ggd](overview_files/shared_overview_table.png)
@@ -23,3 +23,13 @@ Overblik over 3 forelæsninger, der dækker grundlæggende indenfor Modellering 
 Jeg elsker personligt gratis literatur.  *Specielt når det er lovligt.*
 
 ## Bøger
+- [Think Python, 3rd Edition af Allen B. Downey (online bog)](https://allendowney.github.io/ThinkPython/)
+- [Python for Everybody af Charles Severance (PDF)](https://do1.dr-chuck.com/pythonlearn/EN_us/pythonlearn.pdf)
+- [Data Wrangling with Python (eBook/PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
+## Hjemmesider
+- https://docs.python.org/3/library/index.html
+- https://www.tutorialspoint.com/python/index.htm
+- https://numpy.org/doc/stable/reference/index.html
+- https://matplotlib.org/stable/
+- https://scikit-learn.org/stable/
+- https://docs.conda.io/projects/conda/en/stable/user-guide/index.html
