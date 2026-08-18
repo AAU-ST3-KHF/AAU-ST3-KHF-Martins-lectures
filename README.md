@@ -1,5 +1,5 @@
 # Forord
-
+[Guide til at installerer Virtual Environment](https://panopto.aau.dk/Panopto/Pages/Viewer.aspx?id=71a57a20-60be-42b3-a7d0-b4aa00c88fa4)
 
 ![overview_files/shared_overview_table1.png](overview_files/shared_overview_table1.png)
 
