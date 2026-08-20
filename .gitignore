@@ -1,5 +1,8 @@
-cardiovascular_system_blod/
-cardiovascular_system_hemodynamics/
-cardiovascular_system_hjertet/
+blod/
+hemodynamics/
+hjertet/
+blod_sol/
+hemodynamics_sol/
+hjertet_sol/
 *-checkpoint.*
 *.pyc
