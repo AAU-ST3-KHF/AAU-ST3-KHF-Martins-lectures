@@ -35,7 +35,7 @@ def png_path_from_template(table_name: str) -> Path:
 
 
 def data_png_path(df: pd.DataFrame, row_index: int, table_name: str) -> Path:
-    folder = BASE_DIR.parent / str(df.iloc[row_index - 1]["Mappe"])
+    folder = BASE_DIR.parent / str(df.iloc[row_index - 1]["Folder"])
     return folder / "data" / PNG_PATH_TEMPLATE.format(table_name=table_name)
 
 
