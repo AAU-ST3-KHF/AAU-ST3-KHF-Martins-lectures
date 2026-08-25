@@ -6,3 +6,4 @@ hemodynamics_sol/
 hjertet_sol/
 *-checkpoint.*
 *.pyc
+uv.lock

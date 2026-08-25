@@ -8,9 +8,9 @@ Du kan få alle lectures i dette kursus ved at køre følgende linje i din termi
 
 ### Option 1: UV
 >```
-> uv run sync.py
+> uv run setup_repositories.py
 >```
-Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt installerer et virtuelt environment som har alt hvad du skal bruge i dette kursus.
+Denne vil download alle github repos inden i den mappe hvor du har `setup_repositories.py`, samt installerer et virtuelt environment som har alt hvad du skal bruge i dette kursus.
 
 *Note: Denne funktion kræver at du har git og python installeret på din computer.*
 
@@ -20,7 +20,7 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt
 >conda create -n python314_st3_qhf python=3.14 -y
 >conda activate python314_st3_qhf
 >conda install --file requirements.txt -y
->python sync.py
+>python setup_repositories.py
 >```
 
 ### Option 3: python+pip
@@ -30,7 +30,7 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt
 >python314_st3_qhf\Scripts\activate
 >python -m pip install --upgrade pip
 >python -m pip install -r requirements.txt
->python sync.py
+>python setup_repositories.py
 >```
 
 ## Virtual Environment
