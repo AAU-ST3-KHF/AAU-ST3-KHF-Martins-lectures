@@ -5,7 +5,7 @@
 
 Du kan få alle lectures i dette kursus ved at køre følgende linje i din terminal:
 
-## Virtual Environment
+
 ### Option 1: UV
 >```
 > uv run sync.py
@@ -33,6 +33,13 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt
 >python sync.py
 >```
 
+## Virtual Environment
+After following the guide, always use the python environment `python314_st3_qhf` for these exercisese.
+
+## Updates 
+1. If changes occured, i.e. new version of python to your own: `uv sync`
+2. If change occur in the git, write this in terminal `git pull`
+3. Install the following extensions for vs code: `python`, `jupyter`, (see recommendations)
 
 # KOMPLET FORELÆSNINGSPLAN – ST3 Kvantitativ Fysiologi - Det Cardiovascul;re system
 Overblik over Cardiovasculær Modellings Forelæsningerne.
