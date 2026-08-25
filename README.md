@@ -51,15 +51,10 @@ Overblik over Cardiovasculær Modellings Forelæsningerne.
 
 ---
 
-
-
-
 # Literatur Oversigt
-Jeg elsker personligt gratis literatur.  *Specielt når det er lovligt.*
 
 ## Bøger
-- [Think Python, 3rd Edition af Allen B. Downey (online bog)](https://allendowney.github.io/ThinkPython/)
-- [Python for Everybody af Charles Severance (PDF)](https://do1.dr-chuck.com/pythonlearn/EN_us/pythonlearn.pdf)
+- [Quantitative Human Physiology, 2nd Edition](https://shop.elsevier.com/books/quantitative-human-physiology/feher/978-0-12-800883-6)
 - [Data Wrangling with Python (eBook/PDF)](https://datawranglingpy.gagolewski.com/datawranglingpy.pdf)
 ## Hjemmesider
 - https://docs.python.org/3/library/index.html
