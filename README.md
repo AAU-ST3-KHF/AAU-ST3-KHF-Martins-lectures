@@ -5,7 +5,8 @@
 
 Du kan få alle lectures i dette kursus ved at køre følgende linje i din terminal:
 
-## Option 1: UV
+## Virtual Environment
+### Option 1: UV
 >```
 > uv run sync.py
 >```
@@ -13,7 +14,7 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt
 
 *Note: Denne funktion kræver at du har git og python installeret på din computer.*
 
-## Option 2: Conda
+### Option 2: Conda
 
 >```
 >conda create -n python314_st3_qhf python=3.14 -y
@@ -22,7 +23,8 @@ Denne vil download alle github repos inden i den mappe hvor du har sync.py, samt
 >python sync.py
 >```
 
-## Option 3: python+pip
+### Option 3: python+pip
+
 >```
 >python -m venv python314_st3_qhf
 >python314_st3_qhf\Scripts\activate
