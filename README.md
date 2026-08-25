@@ -41,16 +41,6 @@ After following the guide, always use the python environment `python314_st3_qhf`
 2. If change occur in the git, write this in terminal `git pull`
 3. Install the following extensions for vs code: `python`, `jupyter`, (see recommendations)
 
-# KOMPLET FORELÆSNINGSPLAN – ST3 Kvantitativ Fysiologi - Det Cardiovascul;re system
-Overblik over Cardiovasculær Modellings Forelæsningerne.
-
----
-[overview_files/shared_overview_table1.html](overview_files/shared_overview_table1.html)
-
-![Forelæsningsoversigt](overview_files/shared_overview_table1.png)
-
----
-
 # Literatur Oversigt
 
 ## Bøger
